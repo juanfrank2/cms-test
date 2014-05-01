@@ -18,3 +18,15 @@ Route::get('/', function()
 
 
 Route::resource('groups', 'GroupsController');
+
+Route::resource('parameters', 'ParametersController');
+
+Route::resource('actions', 'ActionsController');
+
+Route::resource('steps', 'StepsController');
+
+Route::resource('steps', 'StepsController');
+
+Route::resource('scenarios', 'ScenariosController');
+
+Route::resource('features', 'FeaturesController');
