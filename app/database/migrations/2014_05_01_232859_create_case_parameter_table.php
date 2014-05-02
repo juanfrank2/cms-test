@@ -12,7 +12,7 @@ class CreateCaseParameterTable extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('feature_scenario', function(Blueprint $table) {
+        Schema::create('case_parameter', function(Blueprint $table) {
             $table->string('value');
             $table->integer('id_case')->unsigned()->index();
             $table->integer('id_parameter')->unsigned()->index();

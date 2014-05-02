@@ -12,7 +12,7 @@ class CreateScenarioStepTable extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('feature_scenario', function(Blueprint $table) {
+        Schema::create('scenario_step', function(Blueprint $table) {
             $table->integer('order')->unsigned();
             $table->integer('id_scenario')->unsigned()->index();
             $table->integer('id_step')->unsigned()->index();
