@@ -7,4 +7,9 @@ class Feature extends Eloquent {
 		'name' => 'required',
 		'description' => 'required'
 	);
+
+    public function groups()
+    {
+        return $this->belongsToMany('Group', 'group_feature', 'id_group', 'id_feature');
+    }
 }
