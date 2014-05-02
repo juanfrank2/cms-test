@@ -8,4 +8,10 @@ class Parameter extends Eloquent {
 		'pattern' => 'required',
 		'order' => 'required'
 	);
+
+    public function cases()
+    {
+        return $this->belongsToMany('Case', 'case_parameter', 'id_case', 'id_parameter', 'value');
+    }
+
 }
