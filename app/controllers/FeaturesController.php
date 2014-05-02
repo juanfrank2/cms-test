@@ -8,10 +8,12 @@ class FeaturesController extends BaseController {
 	 * @var Feature
 	 */
 	protected $feature;
+    protected $group;
 
-	public function __construct(Feature $feature)
+	public function __construct(Feature $feature, Group $group)
 	{
 		$this->feature = $feature;
+        $this->group = $group;
 	}
 
 	/**
@@ -33,7 +35,14 @@ class FeaturesController extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('features.create');
+        $groups = $this->group->all();
+
+        $groupList = array();
+
+        foreach ($groups as $gr){
+            $groupList[$gr->id] = $gr->name;
+        }
+		return View::make('features.create')->with('listado', $groupList);
 	}
 
 	/**

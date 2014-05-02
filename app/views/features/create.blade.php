@@ -16,6 +16,11 @@
             {{ Form::textarea('description') }}
         </li>
 
+        <li>
+            {{ Form::label('id_group', 'Grupo asociado:') }}
+            {{ Form::select('id_group', $listado)}}
+        </li>
+
 		<li>
 			{{ Form::submit('Submit', array('class' => 'btn btn-info')) }}
 		</li>
