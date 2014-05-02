@@ -25,8 +25,6 @@ Route::resource('actions', 'ActionsController');
 
 Route::resource('steps', 'StepsController');
 
-Route::resource('steps', 'StepsController');
-
 Route::resource('scenarios', 'ScenariosController');
 
 Route::resource('features', 'FeaturesController');
